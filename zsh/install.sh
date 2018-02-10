@@ -45,7 +45,7 @@ read install
 
 clear
 if [ $install == "yes" ]; then
-    if [ $NODE == true ]; then
+    if [ $NODE == false ]; then
       echo "$(bold "$(green "Installing homebrew...")")"
       echo ""
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
