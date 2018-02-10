@@ -31,7 +31,7 @@ echo
 echo 'oh-my-zsh'
 echo 'spaceship-prompt'
 echo 'my .zshrc'
-if [ $(program_is_installed "npm") == 1 ]; then
+if [ $(program_is_installed "npm") == 0 ]; then
     NODE=false
     echo "Homebrew (a package manager for mac, more info at https://brew.sh/)"
     echo "NodeJS"
@@ -45,20 +45,22 @@ read install
 
 clear
 if [ $install == "yes" ]; then
-    echo "$(bold "$(green "Installing homebrew...")")"
-    echo ""
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    sleep 2
+    if [ $NODE == true ]; then
+      echo "$(bold "$(green "Installing homebrew...")")"
+      echo ""
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      sleep 2
 
-    echo
-    echo
-    echo "$(bold "$(green "Installing NodeJS & NPM...")")"
-    echo
-    brew install node
-    sleep 2
+      echo
+      echo
+      echo "$(bold "$(green "Installing NodeJS & NPM...")")"
+      echo
+      brew install node
+      sleep 2
 
-    echo
-    echo
+      echo
+      echo
+    fi
     echo "$(bold "$(green "Installing oh-my-zsh...")")"
     echo
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
