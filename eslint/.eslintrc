@@ -1,0 +1,48 @@
+{
+    "extends": "eslint:recommended",
+    "globals": {
+        "window": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module",
+        "impliedStrict": true
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "commonjs": true,
+        "jest": true,
+        "node": true,
+    },
+    "rules": {
+        "no-console": "warn",
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-var": "warn",
+        "block-scoped-var": "error",
+        "semi": [
+            "error",
+            "never"
+        ],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "never",
+                "objects": "never",
+                "imports": "never",
+                "exports": "never",
+                "functions": "ignore"
+            }
+        ]
+    }
+}
