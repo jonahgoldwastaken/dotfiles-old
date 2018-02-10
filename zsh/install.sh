@@ -23,7 +23,7 @@ function program_is_installed {
 }
 
 clear
-echo "$(bold "hi!")"
+echo "$(bold "Hi! 👋")"
 echo 'This installer will setup your terminal the way like I have setup mine (except for the theme, you may have to do that one by yourselves)!'
 echo
 echo "The following packages will be installed"
