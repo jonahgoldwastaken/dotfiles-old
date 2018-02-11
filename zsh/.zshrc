@@ -8,7 +8,7 @@ export ZSH=/Users/jonah/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
-ZSH_THEME="bullet-train"
+# ZSH_THEME="bullet-train"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=~/.zsh_themes
@@ -16,13 +16,18 @@ ZSH_CUSTOM=~/.zsh_themes
 #
 # ZSH Plugins
 #
-plugins=(git npm osx z)
+plugins=(git npm osx z zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
 #
 # OWN CONFIGURATIONS
 #
+
+#
+# USE NVM
+#
+source ~/.nvm/nvm.sh
 
 #
 # ALIASES
