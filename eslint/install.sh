@@ -63,7 +63,9 @@ if [ $install == "yes" ]; then
     echo
     echo "$(bold "$(green "Copying over my config (and saving yours in the process)...")")"
     echo
-    mv ~/.eslintrc ~/.eslintrc.old
+    if [ -e ~/.eslintrc ]; then
+        mv ~/.eslintrc ~/.eslintrc.old
+    fi
     cp ./.eslintrc ~/.eslintrc
     sleep 2
 
