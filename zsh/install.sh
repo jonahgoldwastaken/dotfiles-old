@@ -1,25 +1,25 @@
 #!/bin/bash
 
 function bold {
-  printf "\\033[1m%s\\033[22m" "$1"
+    printf "\\033[1m%s\\033[22m" "$1"
 }
 
 function green {
-  printf "\\033[32m%s\\033[0m" "$1"
+    printf "\\033[32m%s\\033[0m" "$1"
 }
 
 function red {
-  printf "\\033[31m%s\\033[0m" "$1"
+    printf "\\033[31m%s\\033[0m" "$1"
 }
 
 # https://gist.github.com/JamieMason/4761049
 function program_is_installed {
-  # set to 1 initially
-  local return_=1
-  # set to 0 if not found
-  type $1 >/dev/null 2>&1 || { local return_=0; }
-  # return value
-  echo "$return_"
+    # set to 1 initially
+    local return_=1
+    # set to 0 if not found
+    type $1 >/dev/null 2>&1 || { local return_=0; }
+    # return value
+    echo "$return_"
 }
 
 clear
@@ -46,20 +46,20 @@ read install
 clear
 if [ $install == "yes" ]; then
     if [ $NODE == false ]; then
-      echo "$(bold "$(green "Installing homebrew...")")"
-      echo ""
-      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-      sleep 2
+        echo "$(bold "$(green "Installing homebrew...")")"
+        echo ""
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        sleep 2
 
-      echo
-      echo
-      echo "$(bold "$(green "Installing NodeJS & NPM...")")"
-      echo
-      brew install node
-      sleep 2
+        echo
+        echo
+        echo "$(bold "$(green "Installing NodeJS & NPM...")")"
+        echo
+        brew install node
+        sleep 2
 
-      echo
-      echo
+        echo
+        echo
     fi
     echo "$(bold "$(green "Installing oh-my-zsh...")")"
     echo
@@ -77,7 +77,9 @@ if [ $install == "yes" ]; then
     echo
     echo "$(bold "$(green "Copying over my config (and saving yours in the process)...")")"
     echo
-    mv ~/.zshrc ~/.zshrc.old
+    if [ -e ~/.zshrc ]; then
+      mv ~/.zshrc ~/.zshrc.old
+    fi
     cp ./.zshrc ~/.zshrc
     sleep 2
 
