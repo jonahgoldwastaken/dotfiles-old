@@ -11,10 +11,9 @@ It's not much, but you gotta start somewhere right? Right?!
 
 I included some very handy dandy install scripts inside the different folders to get you up and running with my setup!
 
-Oh yeah, before I forget. The themes I use for literally everything is called *Nord*. I think it's pretty neat!
+Oh yeah, before I forget. The themes I use for literally everything is called [Nord](https://arcticicestudio.github.io/nord/). I think it's pretty neat!
 
-Here's a screenshot of my terminal with my config and the Nord theme enabled:
-
-![My terminal window](./iterm.png)
+![My iTerm2 terminal window](./iterm.png)  
+> [iTerm2](https://www.iterm2.com/) using the [Nord theme](https://github.com/arcticicestudio/nord-iterm2)
 
 Have fun! 😊
