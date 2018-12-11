@@ -1,19 +1,15 @@
-# My own dotfiles
+# Dotfiles
 
-Dotfiles are awesome! They give that extra bit of personality to mundane stuffs on a computer.
-
-The dotfiles that I use are uploaded into this project and updated regularly to reflect the ones I have on my system. The dotfiles I mostly customise and use are:
-
+## Dotfiles in repository
 - .zshrc
-- .eslintrc
+- .prettierrc
+- .huskyrc
+- .lintstagedrc
 
-It's not much, but you gotta start somewhere right? Right?!
+## Theming
+**Theme**: [Ayu](https://github.com/ayu-theme) (switching between 'light' and 'mirage' version when I feel like it)
+**Font**: [Inconsolata/Ligconsolata](https://github.com/googlefonts/Inconsolata)
 
-I included some very handy dandy install scripts inside the different folders to get you up and running with my setup!
-
-Oh yeah, before I forget. The themes I use for literally everything is called [Nord](https://arcticicestudio.github.io/nord/). I think it's pretty neat!
-
-![My iTerm2 terminal window](./iterm.png)  
-> [iTerm2](https://www.iterm2.com/) using the [Nord theme](https://github.com/arcticicestudio/nord-iterm2)
-
-Have fun! 😊
+## Terminal example
+![Hyper window running the Ayu Mirage theme](./docs/hyper.png)  
+> [Hyper](https://www.hyper.is/) using the [Ayu Mirage theme](https://github.com/weirdpattern/hyper-ayu-mirage)
